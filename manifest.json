@@ -1,0 +1,24 @@
+{
+    "manifest_version": 3,
+    "name": "DictApp menu",
+    "description": "Copiar, pegar y corrector",
+    "version": "1.0",
+
+    "action": {
+        "default_icon": "icon.png",
+        "default_popup": "popup.html"
+    },
+    "icons": {
+      "64": "icon.png"
+    },
+    
+    "content_scripts": [
+        {
+          "matches": ["https://*.dictapp.es/public/dictapp/activity/*"],
+          "js": ["js/content.js"]
+        }
+      ],
+    "permissions": [
+        "activeTab"
+    ]
+}
